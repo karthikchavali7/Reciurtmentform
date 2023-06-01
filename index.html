@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        background-color: #007bff;
+    }
+
+    .recruitment-form {
+        width: 400px;
+        margin: 0 auto;
+        padding: 30px;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        background-color: #f2f2f2;
+    }
+
+    .recruitment-form h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #000000;
+        font-weight: bold;
+        font-size: 24px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+        color: #000000;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="file"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #000000;
+        border-radius: 3px;
+        color: #000000;
+        font-family: inherit;
+        background-color: transparent;
+    }
+
+    input[type="checkbox"] {
+        display: inline-block;
+        margin-right: 5px;
+        color: #000000;
+    }
+
+    button[type="submit"] {
+        background-color: #007bff;
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #000000;
+        border-radius: 3px;
+        color: #000000;
+        font-family: inherit;
+        background-color: transparent;
+    }
+
+    select option {
+        padding: 10px;
+        background-color: #f2f2f2;
+        color: #000000;
+    }
+
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #000000;
+        border-radius: 3px;
+        color: #000000;
+        font-family: inherit;
+        background-color: transparent;
+        resize: vertical;
+    }
+    </style>
+</head>
+<body>
+    <div class="recruitment-form">
+        <h2>Recruitment Form</h2>
+        <form action="submit.php" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="citizenship">Are you an Indian citizen?</label><br>
+                <label for="citizenship_yes">
+                    <input type="radio" id="citizenship_yes" name="citizenship" value="yes" required> Yes
+                </label>
+                <label for="citizenship_no">
+                    <input type="radio" id="citizenship_no" name="citizenship" value="no" required> No
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="education">Education:</label>
+                <input type="text" id="education" name="education" required>
+            </div>
+            <div class="form-group">
+                <label for="position">Position Applying For:</label>
+                <input type="text" id="position" name="position" required>
+            </div>
+            <div class="form-group">
+                <label for="school">School Name:</label>
+                <input type="text" id="school" name="school" required>
+            </div>
+            <div class="form-group">
+                <label for="college">College Name:</label>
+                <input type="text" id="college" name="college" required>
+            </div>
+            <div class="form-group">
+                <label for="skills">Skills:</label>
+                <input type="text" id="skills" name="skills" required>
+            </div>
+            <div class="form-group">
+                <label for="qualifications">Qualifications:</label>
+                <textarea id="qualifications" name="qualifications" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="experience">Experience:</label>
+                <select id="experience" name="experience" required>
+                    <option value="">Select</option>
+                    <option value="fresher">Fresher</option>
+                    <option value="experienced">Experienced</option>
+                </select>
+            </div>
+             <div class="form-group">
+                <label for="salary">Salary Desired:</label>
+                <input type="text" id="salary" name="salary" required>
+            </div>
+            <div class="form-group">
+                <label for="reason">Reason for Leaving Previous Position:</label>
+                <textarea id="reason" name="reason" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="resume">Upload Resume:</label>
+                <input type="file" id="resume" name="resume">
+            </div>
+            
+            <div class="form-group">
+                <label for="photo">Upload Photo:</label>
+                <input type="file" id="photo" name="photo">
+            </div>
+            <div class="form-group">
+              <label>
+                  <input type="checkbox" name="terms" required>
+                  I agree to the terms and conditions
+              </label>
+          </div>
+           
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
